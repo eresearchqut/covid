@@ -3,23 +3,6 @@
 {% load i18n %}
 {% load static %}
 
-{% block sidebar %}
-  {{ block.super }}
-  <div width="100%" class="panel panel-default collapsible">
-    <div class="panel-body">
-      {% if request.user.is_clinician and not request.user.ethically_cleared %} 
-        <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-        {% trans 'About Me PDF' %}
-      {% else %}
-        <a href="{% url 'about_me' registry_code patient_id %}" download>
-          <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-          {% trans 'About Me PDF' %}
-        </a>
-        {% endif %}
-    </div>
-  </div>
-{% endblock %}
-
 {% block extrahead %}
     {{ block.super }}
     <script type="text/javascript" src="{% static 'js/patient_helpers.js' %}"></script>

@@ -27,8 +27,6 @@ PROJECT_LOGO = env.get("project_logo", "images/mnd/MNDR_Logo_transparent.png")
 
 VERSION = env.get('app_version', '%s (covid)' % covid.VERSION)
 
-PDF_TEMPLATES_PATH = f"{os.path.dirname(os.path.dirname(os.path.abspath(__file__)))}/mnd/templates/pdf_export"
-
 # Currently using registration from base TRRF as-is, but keeping these for future reference
 #
 # REGISTRATION_FORM = 'mnd.forms.mnd_registration_form.MNDRegistrationForm'
