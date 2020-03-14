@@ -22,6 +22,8 @@ PROJECT_TITLE_LINK = "login_router"
 
 PROJECT_LOGO = env.get("project_logo", "images/mnd/MNDR_Logo_transparent.png")
 
+LOGIN_REDIRECT_URL = '/patientslisting'
+
 # Registration customisation (if any) goes here
 # REGISTRATION_CLASS = "covid.custom_registration.CustomRegistration"
 
