@@ -1,10 +1,10 @@
-MND
+COVID
 ========
 
 About
 -----
 
-MND is a patient registry based on TRRF (https://github.com/eresearchqut/trrf).
+COVID is a clinical registry based on TRRF (https://github.com/eresearchqut/trrf).
 
 During development, TRRF is installed as a git submodule.
 
