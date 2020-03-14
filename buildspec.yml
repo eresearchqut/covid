@@ -12,6 +12,11 @@ phases:
       #
       # to fetch submodules. It can be simplified, because our GitHub repositories are public, so we don't need to
       # set up SSH.
+      # Install ssh pravate key so we can get access to bitbucket from in the container
+      - chmod 700 ~/.ssh
+      - aws ssm get-parameter --name github-sshkey --with-decryption | jq -r .'Parameter'.'Value' > ~/.ssh/id_rsa
+      - chmod 400 ~/.ssh/id_rsa
+      # validate and check style all yaml files
       - |
         if [ -f .gitmodules ]; then
           echo "Project has git submodules."
