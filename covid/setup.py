@@ -12,10 +12,10 @@ def add_file_for_package(package, subdir, f):
 
 
 packages = [
-    'mnd',
+    'covid',
 ]
 
-for package in ['mnd']:
+for package in ['covid']:
     package_data[package] = []
     if "." in package:
         base_dir, package_dir = package.split(".")
@@ -38,12 +38,11 @@ for package in ['mnd']:
 
     os.chdir(start_dir)
 
-
-setup(name='eresearchqut-mnd',
+setup(name='eresearchqut-covid',
       version="1.0.0",
       packages=packages,
-      description='TRRF MND',
-      long_description='MND is a patient registry based on TRRF (https://github.com/eresearchqut/trrf).',
+      description='TRRF COVID',
+      long_description='COVID is a patient registry based on TRRF (https://github.com/eresearchqut/trrf).',
       author='Queensland University of Technology - eResearch',
       package_data=package_data,
       zip_safe=False,

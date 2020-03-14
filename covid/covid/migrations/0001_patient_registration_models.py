@@ -60,12 +60,12 @@ class Migration(migrations.Migration):
                 ('code', models.CharField(max_length=15)),
                 ('name', models.CharField(max_length=100)),
                 ('type', models.CharField(max_length=15)),
-                ('parent', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='mnd.PrivateHealthFund')),
+                ('parent', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='+', to='covid.PrivateHealthFund')),
             ],
         ),
         migrations.AddField(
             model_name='patientinsurance',
             name='private_health_fund',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='mnd.PrivateHealthFund'),
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to='covid.PrivateHealthFund'),
         ),
     ]

@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rdrf.services.rest.serializers import PatientSerializer
 
 
-class MNDPatientSerializer(PatientSerializer):
+class CovidPatientSerializer(PatientSerializer):
     first_visit = serializers.SerializerMethodField()
 
     def get_first_visit(self, obj):

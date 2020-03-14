@@ -5,7 +5,7 @@ from rdrf.views.patient_view import (
 )
 
 
-from ..registry.patients.mnd_admin_forms import PatientInsuranceForm, PrimaryCarerForm, PreferredContactForm
+from ..registry.patients.covid_admin_forms import PatientInsuranceForm, PrimaryCarerForm, PreferredContactForm
 
 import logging
 logger = logging.getLogger(__name__)

@@ -1,5 +1,5 @@
 from rdrf.forms.registration_forms import PatientRegistrationForm
 
 
-class MNDRegistrationForm(PatientRegistrationForm):
+class CovidRegistrationForm(PatientRegistrationForm):
     phone_number = None

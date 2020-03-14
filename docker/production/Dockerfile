@@ -54,11 +54,11 @@ FROM python:3.8.0-slim
 
 ENV PYTHONUNBUFFERED 1
 
-ENV PYTHONPATH="/app/rdrf/rdrf/:/app/mnd/"
-ENV DJANGO_SETTINGS_MODULE mnd.settings
+ENV PYTHONPATH="/app/rdrf/rdrf/:/app/covid/"
+ENV DJANGO_SETTINGS_MODULE covid.settings
 
-ENV PROJECT_NAME mnd
-ENV PROJECT_SOURCE https://github.com/eresearchqut/mnd.git
+ENV PROJECT_NAME covid
+ENV PROJECT_SOURCE https://github.com/eresearchqut/covid.git
 ENV DEPLOYMENT prod
 ENV PRODUCTION 1
 ENV DEBUG 0

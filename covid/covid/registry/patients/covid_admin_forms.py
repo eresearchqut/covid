@@ -1,7 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext as _
 
-from mnd.models import PatientInsurance, PrimaryCarer, PreferredContact
+from covid.models import PatientInsurance, PrimaryCarer, PreferredContact
 
 
 class PrefixedModelForm(forms.ModelForm):

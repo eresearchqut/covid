@@ -2,10 +2,10 @@
 import os
 
 from rdrf.settings import *
-import mnd
+import covid
 
 
-FALLBACK_REGISTRY_CODE = "mnd"
+FALLBACK_REGISTRY_CODE = "covid"
 LOCALE_PATHS = env.getlist("locale_paths", ['/data/translations/locale'])
 
 # Adding this project's app first, so that its templates overrides base templates
@@ -17,15 +17,15 @@ ROOT_URLCONF = '%s.urls' % FALLBACK_REGISTRY_CODE
 
 SEND_ACTIVATION_EMAIL = False
 
-PROJECT_TITLE = env.get("project_title", "MND")
+PROJECT_TITLE = env.get("project_title", "COVID Registry")
 PROJECT_TITLE_LINK = "login_router"
 
 PROJECT_LOGO = env.get("project_logo", "images/mnd/MNDR_Logo_transparent.png")
 
 # Registration customisation (if any) goes here
-# REGISTRATION_CLASS = "mnd.custom_registration.CustomRegistration"
+# REGISTRATION_CLASS = "covid.custom_registration.CustomRegistration"
 
-VERSION = env.get('app_version', '%s (mnd)' % mnd.VERSION)
+VERSION = env.get('app_version', '%s (covid)' % covid.VERSION)
 
 PDF_TEMPLATES_PATH = f"{os.path.dirname(os.path.dirname(os.path.abspath(__file__)))}/mnd/templates/pdf_export"
 

@@ -12,7 +12,7 @@ from rdrf.views.patients_listing import (
 )
 
 
-class MNDPatientsListingView(PatientsListingView):
+class CovidPatientListingView(PatientsListingView):
 
     def get_columns(self):
         columns = [

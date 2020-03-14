@@ -46,8 +46,8 @@ VOLUME ["/data"]
 
 FROM python:3.8.0-slim
 
-ENV PYTHONPATH="/app/rdrf/rdrf/:/app/mnd/"
-ENV DJANGO_SETTINGS_MODULE mnd.settings
+ENV PYTHONPATH="/app/rdrf/rdrf/:/app/covid/"
+ENV DJANGO_SETTINGS_MODULE covid.settings
 ENV STATIC_ROOT="/data/static"
 ENV WRITABLE_DIRECTORY="/data/scratch"
 ENV LOCALE_PATHS="/data/translations/locale"
