@@ -20,7 +20,7 @@ SEND_ACTIVATION_EMAIL = False
 PROJECT_TITLE = env.get("project_title", "COVID Clinical Registry Platform")
 # PROJECT_TITLE_LINK = "login_router"
 
-PROJECT_LOGO = env.get("project_logo", "covid.png")
+PROJECT_LOGO = env.get("project_logo", "images/covid.png")
 
 LOGIN_REDIRECT_URL = '/patientslisting'
 
