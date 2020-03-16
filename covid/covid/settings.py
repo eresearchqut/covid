@@ -17,7 +17,7 @@ ROOT_URLCONF = '%s.urls' % FALLBACK_REGISTRY_CODE
 
 SEND_ACTIVATION_EMAIL = False
 
-PROJECT_TITLE = env.get("project_title", "COVID Registry")
+PROJECT_TITLE = env.get("project_title", "COVID Clinical Registry Platform")
 # PROJECT_TITLE_LINK = "login_router"
 
 PROJECT_LOGO = env.get("project_logo", "images/mnd/MNDR_Logo_transparent.png")
