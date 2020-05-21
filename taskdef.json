@@ -132,6 +132,10 @@
                 {
                     "name": "VIRUS_CHECKING_ENABLED",
                     "value": "$VIRUS_CHECKING_ENABLED"
+                },
+                {
+                    "name": "SECURE_HSTS_SECONDS",
+                    "value": "$SECURE_HSTS_SECONDS"
                 }
             ],
             "image": "${IMAGE_REPO}:${IMAGE_TAG}",
