@@ -132,9 +132,23 @@
                 {
                     "name": "VIRUS_CHECKING_ENABLED",
                     "value": "$VIRUS_CHECKING_ENABLED"
+                },
+                {
+                    "name": "SECURE_HSTS_SECONDS",
+                    "value": "$SECURE_HSTS_SECONDS"
                 }
             ],
             "image": "${IMAGE_REPO}:${IMAGE_TAG}",
+            "healthCheck": {
+                "retries": 3,
+                "command": [
+                    "CMD-SHELL",
+                    "curl -k -f https://localhost:$CONTAINER_PORT/health-check || exit 1"
+                ],
+                "timeout": 5,
+                "interval": 10,
+                "startPeriod": 30
+            },
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -182,12 +196,28 @@
                     "valueFrom": "$NEW_RELIC_LICENSE_KEY"
                 }
             ]
+        },
+        {
+            "name": "xray-daemon",
+            "image": "amazon/aws-xray-daemon",
+            "cpu": 32,
+            "memoryReservation": 256,
+            "portMappings" : [
+                {
+                    "containerPort": 2000,
+                    "protocol": "udp"
+                },
+                {
+                    "containerPort": 2000,
+                    "protocol": "tcp"
+                }
+            ]
         }
     ],
-    "cpu": "1024",
+    "cpu": "$CPU",
     "executionRoleArn": "$EXECUTION_ROLE_ARN",
     "taskRoleArn": "$TASK_ROLE_ARN",
-    "memory": "2048",
+    "memory": "$MEMORY",
     "networkMode": "awsvpc",
     "family": "$TASK_DEF_NAME",
     "requiresCompatibilities": [
